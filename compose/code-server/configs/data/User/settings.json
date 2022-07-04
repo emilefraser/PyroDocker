@@ -1,0 +1,445 @@
+{
+    "workbench.colorTheme": "Nord",
+    "sync.gist": "2feff47d1357a9dd163fafe65319bce5",
+    "sync.autoDownload": true,
+    "telemetry.telemetryLevel": "off",
+    "team.showWelcomeMessage": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "material-product-icons"
+
+     // VS Code Settings
+     "sync.gist": "2feff47d1357a9dd163fafe65319bce5",
+     "files.autoSave": "afterDelay",
+     "files.autoSaveDelay": 60000,
+
+     // VS Editor Settings
+     "debug.console.fontSize": 13,
+     "editor.fontSize": 13,
+     "prettier.tabWidth": 4,
+     "editor.cursorBlinking": "smooth",
+     "editor.renderWhitespace": "none",
+     "editor.suggestSelection": "first",
+     "editor.tabCompletion": "on",
+     "terminal.integrated.cursorStyle": "underline",
+     "terminal.integrated.fontFamily": "'FiraMono Nerd Font Mono','FuraCode Nerd Font Mono','Hack'",
+     "terminal.integrated.fontSize": 13,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "scm.inputFontFamily": "'Fira Code', default",
+    "markdown.preview.fontSize": 13,
+    "markdown.preview.fontFamily": "'FiraCode Nerd Font','Fira Code','Source Code Pro','Hack',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+
+
+    "powershell.powerShellDefaultVersion": "PowerShell Preview (x64)",
+    "[powershell]": {
+        "editor.defaultFormatter": "ms-vscode.powershell-preview",
+        "editor.renderWhitespace": "all",
+        "editor.tabCompletion": "on",
+        "files.encoding": "utf8bom",
+        "editor.renderControlCharacters": true,
+        "files.autoGuessEncoding": true,
+        "files.trimTrailingWhitespace": true
+    },
+
+
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            // az 
+            {
+                "name": "Attach to PowerShell Functions",
+                "type": "PowerShell",
+                "request": "attach",
+                "customPipeName": "AzureFunctionsPSWorker",
+                "runspaceId": 1,
+                "preLaunchTask": "func host start"
+            },
+            // az functions
+            {
+                "name": "Attach to .NET Functions",
+                "type": "coreclr",
+                "request": "attach",
+                "processId": "${command:azureFunctions.pickProcess}"
+            },
+            // BashDB
+            {
+                "type": "bashdb",
+                "name": "bash: Debug (Select script from list of sh files)",
+                "request": "launch",
+                "cwd": "${workspaceFolder}",
+                "program": "${command:SelectScriptName}",
+                "args": []
+            },
+            // Core CLR
+            {
+                "type": "coreclr",
+                "name": "coreclr: PowerSync DotNet",
+                "request": "launch",
+                "console": "internalConsole",
+                "cwd": "${workspaceFolder}",
+                "program": "${workspaceFolder}/PSYDotNet/bin/Debug/netcoreapp2.0/PSYDotNet.dll",
+                "args": [],
+                "internalConsoleOptions": "openOnSessionStart",
+                "preLaunchTask": "build",
+                "stopAtEntry": false
+            },
+            {
+                "type": "node",
+                "name": "nodejs: Attach nodejs",
+                "request": "attach",
+                "port": 5858,
+                "address": "localhost",
+                "restart": false,
+                "sourceMaps": false,
+                "outDir": null,
+                "localRoot": "${workspaceRoot}",
+                "remoteRoot": null
+            },
+            {
+                "type": "node",
+                "name": "nodejs: Launch nodejs",
+                "request": "launch",
+                "program": "${workspaceRoot}/server.js",
+                "stopOnEntry": false,
+                "args": [],
+                "cwd": "${workspaceRoot}",
+                "preLaunchTask": null,
+                "runtimeExecutable": null,
+                "runtimeArgs": [
+                    "--nolazy"
+                ],
+                "env": {
+                    "NODE_ENV": "development"
+                },
+                "externalConsole": false,
+                "sourceMaps": false,
+                "outDir": null
+            },
+            {
+                "type": "node",
+                "name": "nodejs: Launch nodejs Gulp Build",
+                "request": "launch",
+                "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+                "stopOnEntry": true,
+                "args": [
+                    "hygiene"
+                ]
+            },
+            {
+                "type": "node",
+                "name": "nodejs: Launch nodejs Program",
+                "request": "launch",
+                "program": "${workspaceFolder}\\bin\\www"
+            },
+            {
+                "type": "node",
+                "name": "nodejs: Launch test runner debug",
+                "request": "launch",
+                "program": "${workspaceRoot}/node_modules/ts-node/dist/bin.js",
+                "args": [
+                    "./src/__tests__/debug.ts"
+                ],
+                "cwd": "${workspaceRoot}",
+                "protocol": "inspector"
+            },
+            {
+                "type": "node-terminal",
+                "name": "npm: Launch npm start",
+                "request": "launch",
+                "command": "npm start",
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Attach to Host Process",
+                "request": "attach",
+                "runspaceId": 1,
+                "processId": "${command:PickPSHostProcess}",
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Launch Interactive Session",
+                "request": "launch",
+                "cwd": "${workspaceRoot}",
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Launch Current File",
+                "request": "launch",
+                "cwd": "${file}",
+                "script": "${file}",
+                "args": []
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Launch Current File in Temporary Console",
+                "request": "launch",
+                "cwd": "${file}",
+                "script": "${file}",
+                "args": [],
+                "createTemporaryIntegratedConsole": true
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Launch Current File w/Args Prompt",
+                "request": "launch",
+                "cwd": "${file}",
+                "script": "${file}",
+                "args": [
+                    "${command:SpecifyScriptArgs}"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Launch Module Tests",
+                "request": "launch",
+                "cwd": "${workspaceRoot}",
+                "script": "${workspaceRoot}\\debug.ps1",
+                "args": [
+                    "-ModuleFile '${file}'"
+                ]
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Launch Pester Tests",
+                "request": "launch",
+                "cwd": "${workspaceRoot}",
+                "script": "Invoke-Pester",
+                "args": [],
+            },
+            {
+                "type": "PowerShell",
+                "name": "pwsh: Launch Pester Tests in filedir",
+                "request": "launch",
+                "cwd": "${fileDirname}",
+                "script": "Invoke-Pester",
+                "args": [],
+            },
+            {
+                "type": "python",
+                "name": "py: Attach",
+                "request": "attach",
+                "connect": {
+                    "port": 5678,
+                    "host": "localhost"
+                }
+            },
+            {
+                "type": "python",
+                "name": "py: Launch Current File",
+                "request": "launch",
+                "console": "integratedTerminal",
+                "program": "${file}",
+            },
+            {
+                "type": "python",
+                "name": "py: Current File in cwd",
+                "request": "launch",
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}",
+                "program": "${file}",
+                "justMyCode": true
+            },
+            {
+                "type": "go",
+                "name": "tf: Launch a test function",
+                "request": "launch",
+                "mode": "auto",
+                "program": "${fileDirname}",
+                "args": [
+                    "-test.v",
+                    "-test.run",
+                    "^${selectedText}$"
+                ],
+                "showLog": true,
+                "envFile": "${workspaceFolder}/.vscode/private.env"
+            },
+            {
+                "type": "go",
+                "name": "tf: Launch a test",
+                "request": "launch",
+                "mode": "auto",
+                "program": "${file}",
+                "args": [
+                    "-test.v",
+                    "-test.run",
+                    "^${selectedText}$"
+                ],
+                "env": {
+                    "TF_ACC": "1",
+                },
+                "buildFlags": "-v -tags=all",
+                "showLog": true,
+                "envFile": "${workspaceFolder}/.env"
+            },
+            {
+                "type": "extensionHost",
+                "name": "tf: Launch Client",
+                "request": "launch",
+                "args": [
+                    "--extensionDevelopmentPath=${workspaceFolder}"
+                ],
+                "outFiles": [
+                    "${workspaceFolder}/out/**/*.js"
+                ],
+                "preLaunchTask": "npm: watch"
+            },
+            {
+                "name": "tf: Run Extension Tests",
+                "type": "extensionHost",
+                "request": "launch",
+                "runtimeExecutable": "${execPath}",
+                "args": [
+                    "--extensionDevelopmentPath=${workspaceFolder}",
+                    "--extensionTestsPath=${workspaceFolder}/out/test/integration/index",
+                    "${workspaceFolder}/testFixture"
+                ],
+                "outFiles": [
+                    "${workspaceFolder}/out/test/**/*.js"
+                ],
+                "preLaunchTask": "terraformInitAndWatch"
+            }
+        ]
+    },
+    "sortJSON.contextMenu": {
+        "sortJSON": true,
+        "sortJSONAlphaNum": false,
+        "sortJSONAlphaNumReverse": false,
+        "sortJSONKeyLength": false,
+        "sortJSONKeyLengthReverse": false,
+        "sortJSONReverse": true,
+        "sortJSONType": true,
+        "sortJSONTypeReverse": true,
+        "sortJSONValues": true,
+        "sortJSONValuesReverse": true
+    },
+    "editor.codeLens": false,
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "powershell.buttons.showPanelMovementButtons": true,
+    "powershell.codeFormatting.useCorrectCasing": true,
+    "powershell.integratedConsole.focusConsoleOnExecute": false,
+    "problems.showCurrentInStatus": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": true,
+    "sync.forceDownload": false,
+    "sync.forceUpload": true,
+    "sync.quietSync": false,
+    "workbench.settings.useSplitJSON": true,
+    "DockerRun.DisableAutoGenerateConfig": true,
+    "ai.azureml.experimental: V2Config": false,
+    "asa.enableFeedbackPrompt": false,
+    "go.toolsManagement.autoUpdate": true,
+    "typescript.tsdk": "",
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": ""
+        }
+    ],
+    "[dockercompose]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
+    "docker-explorer.containerLogsOptions": "--tail 50 -",
+    "docker-explorer.showAzureRegistries": false,
+    "docker-explorer.enableTelemetry": false,
+    "docker-explorer.showSuggestedDockerImages": false,
+    "azureFunctions.enableOpenFromPortal": true,
+    "azureFunctions.showHiddenStacks": true,
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.codeFormatting.preset": "Stroustrup",
+    "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+    "powershell.codeFormatting.useConstantStrings": true,
+    "powershell.codeFormatting.whitespaceBetweenParameters": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "azureResourceManagerTools.parameterFiles": {
+        "c:\\users\\efras\\downloads\\template (2)\\livestream-vm-setup-sample-main\\livestream-vm-setup-sample-main\\azuredeploy.json": "azuredeploy.parameters.json",
+        "c:\\users\\efras\\downloads\\template (2)\\template.json": "parameters.json",
+        "c:\\users\\efras\\downloads\\template (2)\\azuredeploy.json": "azuredeploy.parameters.json",
+        "c:\\repos\\pyroaz\\_arm_me\\virtual machine\\azuredeploy.json": "azuredeploy.parameters.json"
+    },
+    "editor.fontFamily": "'Fira Code'",
+    "csharp.suppressDotnetInstallWarning": true,
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "azure.cloud": "AzureCloud",
+    "mongo.shell.path": "",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeLensFontFamily": "'Fira Code'",
+    "material-icon-theme.folders.color": "#0080FF",
+    "team.showWelcomeMessage": false,
+    "markdown.extension.print.theme": "dark",
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "markdown.extension.toc.orderedList": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "npm.enableRunFromFolder": true,
+    "material-icon-theme.showReloadMessage": false,
+    "material-icon-theme.showWelcomeMessage": false,
+    "mssql.format.datatypeCasing": "uppercase",
+    "mssql.format.keywordCasing": "uppercase",
+    "mssql.format.placeSelectStatementReferencesOnNewLine": true,
+    "mssql.showBatchTime": true,
+    "code-runner.clearPreviousOutput": true,
+    "telemetry.telemetryLevel": "off",
+    "workbench.editor.restoreViewState": false,
+    "prettier.proseWrap": "never",
+    "notebook.consolidatedRunButton": true,
+    "notebook.lineNumbers": "on",
+    "notebook.outline.showCodeCells": true,
+    "powershell.developer.editorServicesLogLevel": "Verbose",
+    "powershell.notebooks.showToggleButton": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "powershell.developer.waitForSessionFileTimeoutSeconds": 30,
+    "powershell.integratedConsole.suppressStartupBanner": true,
+    "powershell.codeFormatting.alignPropertyValuePairs": false,
+    "azureTerraform.test.location": "southafricanorth",
+    "terraform-ls.terraformLogFilePath": "C:\\env\\tf\\log\\terraform.log",
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "azure.resourceFilter": [
+        "1e120a60-f9eb-4052-a304-9c9e20d7fcd8/83fd1a18-acc9-4081-a0af-9e8d1b1434f5",
+        "66b39f4a-ac3c-4d64-9d48-83fa5e6f3f51/d57665c1-2107-40a0-be1e-72cc19b2a012"
+    ],
+    "azureFunctions.funcCliPath": "C:\\env\\nvm\\v17.5.0\\node_modules\\azure-functions-core-tools\\bin\\func.exe",
+    "python.defaultInterpreterPath": "C:\\env\\python\\python.exe",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "workbench.colorTheme": "Dracula",
+    "azureFunctions.showProjectWarning": false,
+    "workbench.productIconTheme": "material-product-icons",
+    "material-icon-theme.folders.theme": "classic",
+    "terraform.codelens.referenceCount": true,
+    "terraform-ls.terraformExecPath": "C:\\env\\tf\\bin\\terraform.exe",
+    "update.mode": "manual",
+    "python.condaPath": "C:\\env\\scoop\\apps\\anaconda3\\current\\cona.exe",
+    "appService.enablePythonRemoteDebugging": true,
+    "python.venvPath": "C:\\env\\venv",
+    "hdinsight.azureEnvironment": "Azure",
+    "hdinsight.enableSkipPysparkInstallation": false,
+    "hdinsight.previousExtensionVersion": "1.1.16",
+    "hdinsight.disableOpenSurveyLink": true
+}
+
+
+
+
+}

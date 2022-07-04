@@ -1,0 +1,3 @@
+127.0.0.1 portainer.docker.internal
+127.0.0.1 hydra2.docker.internal
+127.0.0.1 jackett.docker.internal

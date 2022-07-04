@@ -1,0 +1,34 @@
+http:
+  routers:
+    svc-lc:
+      entryPoints: [ epSvc ]
+      priority: 100  #i.e - low priority
+      rule: PathPrefix(`/`)
+      middlewares: [ cors@file ]
+      service: svc-lc
+
+    front-api-lc:
+      entryPoints: [ epFront ]
+      priority: 100  #i.e - low priority
+      rule: PathPrefix(`/api`)
+      middlewares: [ cors@file, api@file ]
+      service: svc-lc
+
+  services:
+    svc-lc:
+      loadBalancer:
+        servers:
+          - url: http://host.docker.internal:3001
+
+  middlewares:
+    api:
+      stripPrefix:
+        prefixes: [ /api ]
+    cors:
+      headers:
+        accessControlAllowMethods: [OPTIONS, GET, POST, PUT, DELETE]
+        accessControlAllowOriginList:
+          - https://backoffice.docker.local
+          - https://localhost
+        accessControlMaxAge: 100
+        addVaryHeader: true

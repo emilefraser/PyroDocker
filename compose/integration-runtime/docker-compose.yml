@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  powershell:
+    container_name: airflow
+    hostname: powershell
+    #image: mcr.microsoft.com/powershell
+    build: .
+    env_file: "${SERVICEROOT}/powershell/powershell.env"
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    volumes:
+      - "${CONFIGROOT}/powershell/config:/config"
+      - "${SERVICEROOT}/powershell/log:/log"
+      - "${SERVICEROOT}/powershell/data:/data"
+      - "${SCRIPTROOT}:/script"
+      - "${SCRIPTROOTUNSORTED}:/scriptunsorted"
+    networks:
+      pyroscript:
+          ipv4_address: 172.22.0.10  
+
+networks:
+  pyroscript:
+    ipam:
+        driver: default
+        config:
+            - subnet: 172.22.0.0/24    
+

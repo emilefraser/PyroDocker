@@ -1,0 +1,17 @@
+{
+  "numericVersion": 10000,
+  "releaseNotes": "https://vscode-sqltools.mteixeira.dev/changelog#v-1-0-0",
+  "run": 1656891482983,
+  "updated": false,
+  "version": "1.0.0",
+  "lastNotificationDate": 0,
+  "installedExtPlugins": {
+    "driver": [
+      "google-cloud-spanner-ecosystem.google-cloud-spanner-driver",
+      "intersystems-community.sqltools-intersystems-driver",
+      "mtxr.sqltools-driver-mssql",
+      "mtxr.sqltools-driver-mysql",
+      "mtxr.sqltools-driver-pg"
+    ]
+  }
+}

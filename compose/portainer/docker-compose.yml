@@ -1,0 +1,39 @@
+version: '3.9'
+services:
+  
+  portainer:   
+    container_name: portainer
+    hostname: portainer
+    image: portainer/portainer-ce:latest
+    environment:
+      - VERSION=docker
+      - SERVICENAME=portainer
+      - TZ=Africa/Johannesburg
+      - UID=1000
+      - GID=1000
+      - VIRTUAL_HOST=portainer.docker.local
+    networks:
+      - drydock_bridge_net
+    ports:   
+      - 9444:9443
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+      - type: bind
+        source: /docker/stacks/portainer/portainer/data
+        target: /data
+      - type: volume
+        source: global_certs
+        target: /certs
+    restart: always
+    
+networks:
+  drydock_bridge_net:
+    external: true
+    name: drydock_bridge_net
+    
+volumes:
+  global_certs:
+    name: global_certs
+    external: true

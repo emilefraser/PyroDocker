@@ -1,0 +1,26 @@
+version: "2.1"
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa\Johannesbutg #Europe/London
+      - PASSWORD=105022_Alpha # password #optional
+      - HASHED_PASSWORD= #optional
+      - SUDO_PASSWORD=105022_Alpha #password #optional
+      #- SUDO_PASSWORD_HASH= #optional
+      - DEFAULT_WORKSPACE=/config/workspace #optional
+      - DOCKER_MODS=linuxserver/mods:code-server-powershell|
+        linuxserver/mods:code-server-terraform|
+        linuxserver/mods:code-server-shellcheck|
+        linuxserver/mods:code-server-extension-arguments|
+        linuxserver/mods:code-server-powershell|
+        linuxserver/mods:code-server-python3|
+        linuxserver/mods:code-server-scikit-learn
+  #  volumes:
+  #    - /path/to/appdata/config:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped

@@ -3,15 +3,12 @@
 #                   Authelia configuration                    #
 ###############################################################
 
-server:
-  host: 0.0.0.0
-  port: 9091
-log:
-  level: debug
-theme: dark
+host: 0.0.0.0
+port: 9091
+log_level: debug
 # This secret can also be set using the env variables AUTHELIA_JWT_SECRET_FILE
 jwt_secret: a_very_important_secret
-default_redirection_url: https://auth.local.example.com
+default_redirection_url: https://public.example.com
 totp:
   issuer: authelia.com
 
@@ -24,22 +21,16 @@ totp:
 authentication_backend:
   file:
     path: /config/users_database.yml
-    password:
-      algorithm: argon2id
-      iterations: 1
-      salt_length: 16
-      parallelism: 8
-      memory: 64
-      
+
 access_control:
   default_policy: deny
   rules:
     # Rules applied to everyone
     - domain: public.example.com
       policy: bypass
-    - domain: heimdall.local.example.com
+    - domain: traefik.example.com
       policy: one_factor
-    - domain: pve1.local.example.com
+    - domain: secure.example.com
       policy: two_factor
 
 session:
@@ -50,11 +41,11 @@ session:
   inactivity: 300  # 5 minutes
   domain: example.com  # Should match whatever your root protected domain is
 
-  # redis:
-  #   host: redis
-  #   port: 6379
-  #   # This secret can also be set using the env variables AUTHELIA_SESSION_REDIS_PASSWORD_FILE
-  #   # password: authelia
+  redis:
+    host: redis
+    port: 6379
+    # This secret can also be set using the env variables AUTHELIA_SESSION_REDIS_PASSWORD_FILE
+    # password: authelia
 
 regulation:
   max_retries: 3
@@ -62,18 +53,15 @@ regulation:
   ban_time: 300
 
 storage:
-  encryption_key: a_very_important_secret # Now required
   local:
     path: /config/db.sqlite3
 
 notifier:
-  # smtp:
-  #   username: test
-  #   # This secret can also be set using the env variables AUTHELIA_NOTIFIER_SMTP_PASSWORD_FILE
-  #   password: password
-  #   host: mail.example.com
-  #   port: 25
-  #   sender: admin@example.com
-  filesystem:
-    filename: /config/notification.txt
+  smtp:
+    username: test
+    # This secret can also be set using the env variables AUTHELIA_NOTIFIER_SMTP_PASSWORD_FILE
+    password: password
+    host: mail.example.com
+    port: 25
+    sender: admin@example.com
 ...
