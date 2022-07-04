@@ -1,0 +1,31 @@
+version: '3.9'
+services:
+  whoami:
+    container_name: whoami
+    hostname: whoami
+    image: containous/whoami
+    networks:
+      delaporte_macveno1_net:
+        ipv4_address: 192.168.68.20
+    environment:
+      - TZ=Africa/Johannesburg
+      - PLEX_CLAIM=claim-cYARNiVYHzPoYVry-FE_
+      - PGID=1000
+      - PUID=1000
+    volumes:
+      - type: bind
+        source: "/docker/stacks/autopirate/configs/plex"
+        target: "/config"
+    
+networks:
+  delaporte_macveno1_net:
+    name: delaporte_macveno1_net
+    driver: macvlan
+    driver_opts:
+      parent: eno1
+    ipam:
+      config:
+        - subnet: "192.168.68.0/16"
+          # ip_range: "192.168.68.20/56"
+          gateway: "192.168.68.1"   
+    

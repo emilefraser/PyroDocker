@@ -1,0 +1,22 @@
+columns format version: 1
+20 columns:
+`timestamp` DateTime64(9)
+`traceID` String
+`spanID` String
+`parentSpanID` String
+`serviceName` LowCardinality(String)
+`name` LowCardinality(String)
+`kind` Int32
+`durationNano` UInt64
+`tags` Array(String)
+`tagsKeys` Array(String)
+`tagsValues` Array(String)
+`statusCode` Int64
+`references` String
+`externalHttpMethod` Nullable(String)
+`externalHttpUrl` Nullable(String)
+`component` Nullable(String)
+`dbSystem` Nullable(String)
+`dbName` Nullable(String)
+`dbOperation` Nullable(String)
+`peerService` Nullable(String)

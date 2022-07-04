@@ -1,0 +1,106 @@
+version: '3.9'
+services:
+
+  traefik:
+    image: traefik:latest
+    container_name: "traefik"
+    environment:      
+      - SERVICENAME=traefik
+    command:
+      - --providers.docker=true
+      - --api.insecure=true
+      - --providers.file.filename=/root/.config/ssl.toml
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+    networks:
+      - web
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "443:44"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /docker/containers/docker4localdev/traefik-ssl.toml:/root/.config/ssl.toml
+      - /docker/containers/docker4localdev/certs/:/certs/
+      - /docker/containers/docker4localdev/etc/:/etc/
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik-http.entrypoints=web"
+      - "traefik.http.routers.traefik-http.rule=Host(`delaporte`)"
+      - "traefik.http.routers.traefik-http.middlewares=traefik-https"
+      - "traefik.http.middlewares.traefik-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+      - "traefik.http.routers.traefik.rule=Host(`delaporte`)"
+      - "traefik.http.routers.traefik.tls=true"
+      - "traefik.docker.network=web"
+
+  whoami1:
+    container_name: testnet_whoami1
+    image: containous/whoami
+    environment:
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+    networks:
+      - web   
+    ports:
+      - 91:80
+    labels:
+      - "traefik.http.routers.testnet_whoami1-http.entrypoints=web"
+      - "traefik.http.routers.testnet_whoami1-http.rule=Host(`testnet_whoami1.delaporte`)"
+      - "traefik.http.routers.testnet_whoami1-http.middlewares=testnet_whoami1-https"
+      - "traefik.http.middlewares.testnet_whoami1-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.testnet_whoami1.entrypoints=websecure"
+      - "traefik.http.routers.testnet_whoami1.rule=Host(`testnet_whoami1.delaporte`)"
+      - "traefik.http.routers.testnet_whoami1.tls=true"
+      - "traefik.docker.network=web"
+
+  whoami2:
+    container_name: testnet_whoami2
+    image: containous/whoami
+    environment:
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+    networks:
+      - web   
+    ports:
+      - 92:80
+    labels:
+      - "traefik.http.routers.testnet_whoami2-http.entrypoints=web"
+      - "traefik.http.routers.testnet_whoami2-http.rule=Host(`testnet_whoami2.delaporte`)"
+      - "traefik.http.services.testnet_whoami2.loadbalancer.server.port=92"
+        #- "traefik.http.routers.testnet_whoami2-http.middlewares=testnet_whoami2-https"
+        # - "traefik.http.middlewares.testnet_whoami2-https.redirectscheme.scheme=https"
+        #- "traefik.http.routers.testnet_whoami2.entrypoints=websecure"
+        #- "traefik.http.routers.testnet_whoami2.rule=Host(`testnet_whoami2.delaporte`)"
+        #- "traefik.http.routers.testnet_whoami2.tls=true"
+      - "traefik.docker.network=web"
+
+  whoami3:
+    container_name: whoami3
+    image: containous/whoami
+    environment:
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+    networks:
+      - web   
+    ports:
+      - 93:80
+    labels:
+      - "traefik.enabled=true"     
+      - "traefik.http.routers.whoami3-http.entrypoints=web"
+      - "traefik.http.routers.whoami3-http.rule=Host(`whoami3.delaporte`)"
+        #- "traefik.http.routers.testnet_whoami3-http.middlewares=testnet_whoami3-https"
+        #- "traefik.http.middlewares.testnet_whoami3-https.redirectscheme.scheme=https"
+        #- "traefik.http.routers.testnet_whoami3.entrypoints=websecure"
+        #- "traefik.http.routers.testnet_whoami3.rule=Host(`delaporte`)"
+        # - "traefik.http.routers.testnet_whoami3.tls=true"
+      - "traefik.docker.network=web"
+
+networks:
+  # Define the network on which is going to operate Traefik.
+  web:
+    external: true

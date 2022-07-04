@@ -1,0 +1,1 @@
+docker run -d   -p 80:80   -e REGISTRY_HOST=registry.yourdomain.com   -e REGISTRY_PORT=443   -e REGISTRY_PROTOCOL=https   -e SSL_VERIFY=false   -e ALLOW_REGISTRY_LOGIN=true   -e REGISTRY_ALLOW_DELETE=true   parabuzzle/craneoperator:latest

@@ -1,0 +1,79 @@
+version: "3.9"
+services:
+
+  # logarr:
+  #   image: monitorr/logarr
+  #   container_name: logarr
+  #   hostname: logarr
+  #   env_file: "${SERVICEROOT}/logarr/logarr.env"
+  #   ports:
+  #     - "9998:80"
+  #   volumes:
+  #     - "${DOCKERSOCKET}:${DOCKERSOCKET}"
+  #     - "${SERVICEROOT}/logarr:/config"
+  #     - "${SERVICEROOT}/data:/data"   
+  #     - "${SERVICEROOT}/log:/log"
+  #     - "D:/Download/AutoPirate/_test/_compose_test_radarr/traefik/log:/log/traefik"
+  #   restart: unless-stopped
+  #   networks:
+  #     pyromonitor:
+  #         ipv4_address: 172.30.0.90
+  
+  # DOZZLE
+  dozzle:
+    container_name: dozzle
+    hostname: dozzle
+    image: amir20/dozzle:latest
+    env_file: "${SERVICEROOT}/dozzle/dozzle.env"
+    ports:
+      - 9999:8080     
+    networks:
+      pyromonitor:
+          ipv4_address: 172.30.0.80
+    volumes:
+      - "${DOCKERSOCKET}:${DOCKERSOCKET}"
+      - "${SERVICEROOT}/dozzle:/config"   
+      - "${SERVICEROOT}/data:/data"   
+      - "${SERVICEROOT}/log:/log"   
+    restart: always
+   
+
+  ## LOGSPOUT
+  logspout:
+    container_name: logspout
+    hostname: logspout
+    image: gliderlabs/logspout
+    env_file: "${SERVICEROOT}/logspout/logspout.env"
+    ports:
+        - 9997:80
+    networks:
+      pyromonitor:
+          ipv4_address: 172.30.0.79    
+    volumes:
+      - "${DOCKERSOCKET}:${DOCKERSOCKET}"
+      - "${SERVICEROOT}/logspout:/config"   
+      - "${SERVICEROOT}/data:/data"   
+      - "${SERVICEROOT}/log:/log" 
+    restart: always
+    
+  healthchecks:
+    image: ghcr.io/linuxserver/healthchecks
+    container_name: healthchecks
+    hostname: healthchecks 
+    env_file: '${SERVICEROOT}/healthchecks/healthchecks.env'
+    networks:
+      pyromonitor:
+        ipv4_address: 172.30.0.89 
+    ports:
+      - '8900:8000'
+    volumes:
+      - '${SERVICEROOT}/healthchecks/data:/data' 
+    restart: always
+  
+  
+networks:
+  pyromonitor:
+      ipam:
+          driver: default
+          config:
+              - subnet: 172.30.0.0/16    

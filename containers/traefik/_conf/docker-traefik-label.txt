@@ -1,0 +1,12 @@
+
+       --label "traefik.enable=true" \
+        --label "traefik.protocol=http" \
+ 	     --label "traefik.first.port=80" \
+  		 --label "traefik.first.frontend.rule=Host:web1.example.com" \
+ 	     --label "traefik.second.port=8080" \
+  		 --label "traefik.second.frontend.rule=Host:web2.example.com" \
+  	
+    
+ Above labels will allow us to forward web1.example.com to docker container port 80 and web2.example.com to same container's port 8080
+ 
+ Please note that this labels are valid for traefik v1. v2 has different labels

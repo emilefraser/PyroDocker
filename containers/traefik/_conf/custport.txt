@@ -1,0 +1,7 @@
+traefik2 label for the container running service  different than port 80 (ie 8080)
+
+container_name: webserver
+    restart: always
+    labels:
+      - traefik.http.routers.websrv.rule=Host(`cloud.mydomain.com`)
+      - traefik.http.services.websrv.loadbalancer.server.port=8080

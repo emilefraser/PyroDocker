@@ -1,0 +1,85 @@
+version: '3.9'
+
+services:
+
+# ======================================
+#	TRAEFIK - reverse proxy
+#=======================================
+
+  reverse-proxy:
+    image: traefik:latest
+    command:
+      - "--traefik.enable=true"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+      - "--providers.file.watch=true"
+
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - --providers.file.filename=/root/.config/ssl.toml
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - "--entrypoints.web.http.redirections.entryPoint.to=web-secure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "reverse-proxy.http.routers.api.rule=Host(`${DOMAIN}`)"
+      - "reverse-proxy.http.routers.api.entrypoints=web-secure"
+      - "--loglevel=DEBUG"
+      - "--accesslog=true"
+      - "--accessLog.filePath=/var/log/traefik.log"
+
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8088:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # So that Traefik can listen to the Docker events
+    restart: always
+
+
+# ========================================
+#	WHOAMI - test webserver
+#=========================================
+
+  whoami:
+    image: containous/whoami
+    container_name: whoami
+    ports:
+      - 3002:80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`whoami.${DOMAIN}`)"
+      - "traefik.http.routers.whoami.entrypoints=web-secure"
+      - "traefik.http.routers.whoami.tls.certresolver=certificato"
+      - "traefik.http.routers.whoami.tls.domains[0].main=*.${DOMAIN}"
+    restart: always
+
+#========================================
+#  UPTIME KUMA
+#========================================
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    volumes:
+      - /docker/test/uptime-kuma:/app/data
+    ports:
+      - 3001:3001
+    labels:
+      #  HTTPS traffic
+      - "traefik.enable=true"
+      - "traefik.http.routers.uptime.rule=Host(`status.${DOMAIN}`)"
+      - "traefik.http.routers.uptime.entrypoints=web-secure"
+      - "traefik.http.routers.uptime.tls=true"
+      - "traefik.http.routers.uptime.tls.certresolver=certificato"
+      - "traefik.http.routers.uptime.tls.domains[0].main=*.${DOMAIN}"
+      - "traefik.http.routers.uptime.service=uptimeService"
+      - "traefik.http.services.uptimeService.loadBalancer.server.port=3001"
+    restart: unless-stopped
+
+  echo-server:
+    image: ealen/echo-server:latest
+    environment:
+      - ENABLE__ENVIRONMENT=false
+    ports:
+      - 3000:80
+    restart: always    

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Add permission to make this file executable | chmod +x stop
+
+docker service rm tool-socketproxy
+docker service rm tool-traefik
+
+docker stack rm webapps
+
+docker network rm ntw_front
+docker network rm ntw_socketproxy
+
+docker system prune -f

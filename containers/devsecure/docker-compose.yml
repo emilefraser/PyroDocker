@@ -1,0 +1,53 @@
+version: "3.9"
+services:
+
+  ## SWAG  
+  swag:
+    image: linuxserver/swag
+    container_name: swag
+    hostname: swag
+    #env_file: "swag/swag.env"
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - type: bind
+        source: "C:/env/devsecure/swag"
+        target: /config
+    restart: unless-stopped
+    networks:
+      devsecure:
+          ipv4_address: 172.25.0.2
+
+  ## KEYCLOAK          
+  keycloak:
+    #image: quay.io/keycloak/keycloak:latest
+    image: jboss/keycloak
+    container_name: keycloak
+    hostname: keycloak
+    environment:
+      - "KEYCLOAK_USER=admin"
+      - "KEYCLOAK_PASSWORD=admin"
+      - "DB_VENDOR=h2"
+      - "KEYCLOAK_STATISTICS=all" 
+      - "KEYCLOAK_LOGLEVEL=ALL"
+      - "ROOT_LOGLEVEL=ALL"
+    #env_file: "keycloak/keycloak.env"
+    ports:
+      - "8180:8080"
+    networks:
+      devsecure:
+          ipv4_address: 172.25.0.3  
+    volumes:
+      - "${DOCKERSOCKET}:${DOCKERSOCKET}"
+      - "${SERVICEROOT}/keycloak/config:/config"   
+      - "${SERVICEROOT}/keycloak/data:/data"   
+      - "${SERVICEROOT}/keycloak/log:/log"
+      - "${SERVICEROOT}/keycloak/metric/metrics"
+
+networks:
+  devsecure:
+      ipam:
+          driver: default
+          config:
+              - subnet: 172.25.0.0/16

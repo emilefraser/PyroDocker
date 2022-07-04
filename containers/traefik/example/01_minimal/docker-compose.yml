@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  traefik:
+    image: traefik:v2.0
+    command: --providers.docker
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+  web1:
+    image: nginx:alpine
+    labels:
+      - traefik.http.routers.web1.rule=Host(`web1.localhost`)
+  web2:
+    image: containous/whoami
+    labels:
+      - traefik.http.routers.web2.rule= ( Host(`delaporte.manakin-velociraptor.ts.net`) && PathPrefix(`/web9`) )  || ( Host(`localhost`) && PathPrefix(`/web9`) )

@@ -1,0 +1,77 @@
+version: "3"
+services:
+   traefik:
+    image: traefik:v2.2
+   # More config ...
+  gophish:
+    image: gophish/gophish
+    volumes:
+      - ${GOPHISH_DB_DIR}:/app/database
+      - ${GOPHISH_STATIC_DIR}:/app/static/endpoint
+      - ${GOPHISH_STATIC_DIR}:/opt/gophish/static/endpoint
+    restart: on-failure:5
+    dns_search: example.fr
+    hostname: www.example.fr
+    domainname: example.fr
+    container_name: gophish
+    networks:
+      internal-server:
+        aliases:
+          - www.example.fr
+    environment:
+      - ADMIN_LISTEN_URL=0.0.0.0:3333
+      - ADMIN_USE_TLS=false
+      - PHISH_LISTEN_URL=0.0.0.0:888
+      - PHISH_USE_TLS=false
+      - GOPHISH_INITIAL_ADMIN_PASSWORD=public
+      - DB_FILE_PATH=/app/database/gophish.db
+    labels:
+      traefik.enable: true
+      traefik.docker.network: internal-server
+
+      traefik.http.routers.www-router.rule: host(`www.example.fr`)
+      traefik.http.routers.www-router.entrypoints: websecure
+      traefik.http.routers.www-router.tls: "true"
+      traefik.http.routers.www-router.tls.certresolver: "acmeresolver"
+      traefik.http.routers.www-router.service: www
+      # You can remove the next line, only custom config for me
+      traefik.http.routers.www-router.middlewares: "deny-robots@file, clean-headers@file"
+
+      traefik.http.routers.www-router-http.rule: host(`www.example.fr`)
+      traefik.http.routers.www-router-http.entrypoints: web
+      traefik.http.routers.www-router-http.service: www
+      # You can remove the next line, only custom config for me
+      traefik.http.routers.www-router-http.middlewares: "deny-robots@file, clean-headers@file"
+
+      traefik.http.services.www.loadbalancer.server.port: 888
+
+      traefik.http.routers.admin-router-http.rule: host(`gophish-admin.example.fr`)
+      traefik.http.routers.admin-router-http.entrypoints: web
+      traefik.http.routers.admin-router-http.service: administration
+     # You can remove the next line, only custom config for me
+      traefik.http.routers.admin-router-http.middlewares: "deny-robots@file, clean-headers@file"
+
+      traefik.http.routers.admin-router.rule: host(`gophish-admin.example.fr`)
+      traefik.http.routers.admin-router.entrypoints: websecure
+      traefik.http.routers.admin-router.tls: "true"
+      traefik.http.routers.admin-router.tls.certresolver: "acmeresolver"
+      traefik.http.routers.admin-router.service: administration
+      # You can remove the next line, only custom config for me
+      traefik.http.routers.admin-router.middlewares: "deny-robots@file, clean-headers@file"
+
+      traefik.http.services.administration.loadbalancer.server.port: 3333
+traefik.yml
+If you see on the dashboard a router Traefik did create itself.
+
+providers:
+    docker:
+        exposedbydefault: false
+        defaultRule: "HostRegexp(`{{ index .Labels \"com.docker.compose.service\"}}-defaultRule.localhost`)"
+ACME resolver by http (traefik.yml)
+certificatesResolvers:
+    acmeresolver:
+        acme:
+            email: tech@example.fr
+            storage: acme.json
+            httpChallenge:
+                entryPoint: web

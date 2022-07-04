@@ -1,0 +1,160 @@
+## Trafik Multi Network Deployment
+
+1. Create Traefik network
+
+` # docker network  create --driver=bridge --attachable --internal=false traefik `
+
+2. Edit `traefik2/docker-compose.yml`
+    - Change ACME email
+    - Change --providers.docker.network=traefik value if you created different network then `traefik`
+
+3. Deploy traefik
+
+ `docker-compose -f traefik2/docker-compose.yml up -d`
+
+4. Edit `nextcloud/docker-compose.yml`
+    - Change traefik.http.routers.nextcloud.rule Host
+    - Remove `traefik.http.middlewares.nextcloud.headers.customFrameOptionsValue` and `contentSecurityPolicy`
+      if you dont need to iframe access from your external website
+    - Change PostgreSQL environments
+    - Edit `TRUSTED_PROXIES` with your traefik network address
+5. Deploy nextcloud
+
+ `docker-compose -f nextcloud/docker-compose.yml up -d`
+ 
+ 
+$ cat traefik2/docker-compose.yml
+ 
+ # Create  network first
+# docker network  create --driver=bridge --attachable --internal=false traefik
+#NOTES:
+#1. certificatesresolvers.myresolver.acme.email=myemail@gmail.com 
+# cat docker-compose.yml
+
+version: '3.3'
+
+volumes:
+  letsencrypt:
+    driver: local
+
+
+services:
+
+  traefik:
+    image: traefik:v2.2
+    container_name: traefik
+    restart: always
+    command:
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.network=traefik"
+      - "--providers.docker.exposedbydefault=true"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
+      - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.myresolver.acme.email=myemail@gmail.com"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - default
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - letsencrypt:/letsencrypt
+
+networks:
+  default:
+    external:
+      name: traefik
+
+
+$ cat nextcloud/docker-compose.yml
+
+# Create netxcloud network first
+# docker network create nextcloud
+#NOTES:
+#1. certificatesresolvers.myresolver.acme.email=myemail@gmail.com 
+#2. TRUSTED_PROXIES values based on your 'traefik docker network run docker network inspect traefik' to see the network
+#3. remove traefik.http.middlewares.nextcloud.headers.contentSecurityPolicy and  
+#traefik.http.middlewares.nextcloud.headers.customFrameOptionsValue if you don't want to allow iframe your domain
+
+
+version: '3.3'
+
+volumes:
+  nextcloud-www:
+    driver: local
+  nextcloud-db:
+    driver: local
+  redis:
+    driver: local
+
+
+services:
+
+  db:
+    restart: always
+    image: postgres:11
+    networks:
+      - nextcloud
+    environment:
+    - POSTGRES_USER=nextcloud
+    - POSTGRES_PASSWORD=password
+    - POSTGRES_DB=nextcloud
+    volumes:
+    - nextcloud-db:/var/lib/postgresql/data
+  redis:
+    image: redis:latest
+    restart: always
+    networks:
+      - nextcloud
+    volumes:
+      - redis:/var/lib/redis
+
+  nextcloud:
+    image: nextcloud:latest
+    restart: always
+    networks:
+      - default
+      - nextcloud
+    depends_on:
+      - redis
+      - db
+    labels:
+      - traefik.http.routers.nextcloud.middlewares=nextcloud,nextcloud_redirect
+      - traefik.http.routers.nextcloud.tls.certresolver=myresolver
+      - traefik.http.routers.nextcloud.rule=Host(`nextcloud.mydomain.com`)
+      - traefik.http.middlewares.nextcloud.headers.customFrameOptionsValue=ALLOW-FROM https://mydomain.com
+      - traefik.http.middlewares.nextcloud.headers.contentSecurityPolicy=frame-ancestors 'self' mydomain.com *.mydomain.net
+      - traefik.http.middlewares.nextcloud.headers.stsSeconds=155520011
+      - traefik.http.middlewares.nextcloud.headers.stsIncludeSubdomains=true
+      - traefik.http.middlewares.nextcloud.headers.stsPreload=true
+      - traefik.http.middlewares.nextcloud_redirect.redirectregex.regex=/.well-known/(card|cal)dav
+      - traefik.http.middlewares.nextcloud_redirect.redirectregex.replacement=/remote.php/dav/
+    environment:
+      - POSTGRES_DB=nextcloud
+      - POSTGRES_USER=nextcloud
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST=db
+      - NEXTCLOUD_ADMIN_USER=admin
+      - NEXTCLOUD_ADMIN_PASSWORD=adminpass
+      - REDIS_HOST=redis
+      - NEXTCLOUD_TRUSTED_DOMAINS=nextcloud.mydomain.com
+      - TRUSTED_PROXIES=172.19.0.0/16
+    volumes:
+      - nextcloud-www:/var/www/html
+
+networks:
+  default:
+    external:
+      name: traefik
+
+  nextcloud:
+      internal: true
+ 
+ 

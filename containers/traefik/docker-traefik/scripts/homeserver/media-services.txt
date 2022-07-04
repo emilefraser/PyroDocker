@@ -1,0 +1,8 @@
+lidarr
+radarr
+sonarr
+readarr
+navidrome
+jellyfin
+bazarr
+airsonic-advanced

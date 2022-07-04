@@ -1,0 +1,98 @@
+
+version: '3.9'
+
+services:
+  traefik:
+    image: traefik:latest
+    container_name: "traefik"
+    environment:      
+      - SERVICENAME=traefik
+      - VERSION=docker
+    command:
+      - --providers.docker=true
+      # Enable the API handler in insecure mode (for Dashboard to be abailable from entry point)
+      - --api.insecure=true
+      # Defines the path to the configuration file with the certificates list.
+      - --providers.file.filename=/root/.config/ssl.toml
+      # Define Traefik entry points to port [80] for http and port [443] for https.
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+        #networks:
+      # Define the network on which traefik is going to operate.
+      # - web
+    ports:
+      # Open traefik http [80] and https [443] ports.
+      - '80:80'
+      - '8080:8080'
+      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Mount the configuration file with the certificates list.
+      - /docker/containers/traefik/traefik-ssl.toml:/root/.config/ssl.toml
+      # Mount the folder containing the certificates for https.
+      #- /docker/containers/traefik/certs/:/certs/
+      # Mount the folder containing network and dns
+      #- /docker/containers/traefik/etc/:/etc/
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik-http.entrypoints=web"
+      - "traefik.http.routers.traefik-http.rule=Host(`delaporte.manakin-velociraptor.ts.net`)"
+      - "traefik.http.routers.traefik-http.middlewares=traefik-https"
+      - "traefik.http.middlewares.traefik-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+      - "traefik.http.routers.traefik.rule=Host(`delaporte.manakin-velociraptor.ts.net`)"
+      - "traefik.http.routers.traefik.tls=true"
+
+
+# jackett:
+#    image: ghcr.io/linuxserver/jackett:latest
+ #   container_name: jackett
+ #   hostname: jackett
+ #   environment:      
+ #     - SERVICENAME=jackett
+ #     - VERSION=docker
+ #   labels:
+      # Enable Portainer handler entrypoint on http.
+  #    - "traefik.http.routers.jackett-http.entrypoints=web"
+  #    - "traefik.http.routers.jackett.rule=Host(`delaporte.manakin-velociraptor.ts.net`) && Path(`/jackett`)"
+  #    - "traefik.http.services.jackett.loadbalancer.server.port=9117"
+      # Define Portainer handler http host.
+    #  - "traefik.http.routers.${DOCKER_NAME}_jackett-http.rule=Host(`jackett.${DOCKER_BASE_URL}`)"
+      # Define http middleware and redirection to https.
+     # - "traefik.http.routers.${DOCKER_NAME}_jackett-http.middlewares=${DOCKER_NAME}_jackett-https"
+     # - "traefik.http.middlewares.${DOCKER_NAME}_jackett-https.redirectscheme.scheme=https"
+      # Enable Portainer handler entrypoint on https.
+    #  - "traefik.http.routers.${DOCKER_NAME}_jackett.entrypoints=websecure"
+      # Define Portainer handler host.
+     # - "traefik.http.routers.${DOCKER_NAME}_jackett.rule=Host(`jackett.${DOCKER_BASE_URL}`)"
+      # Instructs Traefik that the current router is dedicated to HTTPS requests only.
+     # - "traefik.http.routers.${DOCKER_NAME}_jackett.tls=true"
+      # Define on which network Traefik is operating.
+     # - "traefik.docker.network=web"
+ 
+ # hydra2:
+ ##   image: ghcr.io/linuxserver/nzbhydra2:latest
+  #  container_name: "hydra2"
+ #   environment:      
+ #     - SERVICENAME=hydra2
+ #     - VERSION=docker
+ #   labels:
+ #     - "traefik.enable=true"
+ #     - "traefik.http.routers.hydra2-http.entrypoints=web" 
+ ##     - "traefik.http.routers.hydra2.rule=Path(`/hydra2`)"
+  #    - "traefik.http.services.hydra2.loadbalancer.server.port=5076"
+
+
+#- "traefik.http.routers.${DOCKER_NAME}_hydra2-http-rule=Host(`hydra2.${DOCKER_BASE_URL}`)"
+#      - "traefik.http.routers.${DOCKER_NAME}_hydra2-http.middlewares=${DOCKER_NAME}_hydra2-https"
+##      - "traefik.http.routers.${DOCKER_NAME}_hydra2.entrypoints=websecure"
+ #     - "traefik.http.middlewaress.${DOCKER_NAMWE}_hydra2-https.redirectscheme.scheme=https"
+ #     - "traefik.http.routers.${DOCKER_NAME}_hydra2.rule=Host(`hydra2.${DOCKER_BASE_URL}`)"
+ #     - "traefik.http.routers.${DOCKER_NAME}_hydra2.tls=true"
+ #     - "traefik.docker.network=web"     
+
+#networks:
+  # Define the network on which is going to operate Traefik.
+#  web:
+ #   external: true#

@@ -1,0 +1,805 @@
+2021/04/25 07:36:54 [error] 291#291: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:36:54 [error] 291#291: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\ProgramData\nzbdrone\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\ProgramData\Radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:36:54 [error] 291#291: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\php\7.1\logs\php.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:37:02 [error] 292#292: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.29.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/25 07:37:02 [error] 292#292: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\ProgramData\nzbdrone\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\ProgramData\Radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/25 07:37:02 [error] 292#292: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\php\7.1\logs\php.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/25 07:37:46 [error] 292#292: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.29.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/25 07:37:46 [error] 292#292: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\ProgramData\nzbdrone\logs\sonarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\ProgramData\nzbdrone\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\ProgramData\Radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\ProgramData\Radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/25 07:37:46 [error] 292#292: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\php\7.1\logs\php.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\php\7.1\logs\php.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/25 07:42:56 [error] 291#291: *16 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '"Sonarr"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /config/www/logarr/assets/config/config.php on line 71" while reading response header from upstream, client: 172.29.0.1, server: _, request: "GET /assets/php/time.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/25 07:45:12 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '"Sonarr"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /config/www/logarr/assets/config/config.php on line 71" while reading response header from upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:45:17 [error] 281#281: *3 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '"Sonarr"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /config/www/logarr/assets/config/config.php on line 71" while reading response header from upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:45:18 [error] 281#281: *3 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '"Sonarr"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /config/www/logarr/assets/config/config.php on line 71" while reading response header from upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:45:28 [error] 281#281: *3 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '"Sonarr"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /config/www/logarr/assets/config/config.php on line 71" while reading response header from upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:45:31 [error] 281#281: *3 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected '"Sonarr"' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /config/www/logarr/assets/config/config.php on line 71" while reading response header from upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:46:24 [error] 279#279: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:46:24 [error] 279#279: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:46:24 [error] 279#279: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:46:24 [error] 279#279: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:46:24 [error] 279#279: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:46:24 [error] 279#279: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:48:20 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:48:20 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:48:20 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:48:20 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:48:20 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/25 07:48:20 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.29.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:24 [error] 278#278: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:26 [error] 279#279: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:37 [error] 278#278: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:38:42 [error] 277#277: *16 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:42 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:39:58 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:40:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:41:31 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\sabnzbd\log\sabnzbd.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\sonarr\logs\sonarr.txt in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\sonarr\logs\sonarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\radarr\logs\radarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\radarr\logs\radarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\readarr\logs\readarr.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\readarr\logs\readarr.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\jackett\Jackett\log.txt in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\jackett\Jackett\log.txt): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "  filemtime(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\autopirate\hydra2\logs\nzbhydra2.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log in /config/www/logarr/index.php on line 346" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:01 [error] 280#280: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file(C:\env\docker\autopirate\rutorrent\log\rtorrent\rtorrent.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:20 [error] 279#279: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:42:20 [error] 279#279: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 00:42:24 [error] 279#279: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:42:24 [error] 279#279: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:43:25 [error] 279#279: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 337" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 00:43:25 [error] 279#279: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefik.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefik.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filemtime(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 337
+PHP message: PHP Warning:  filesize(): stat failed for C:\env\docker\traefik\traefikapp\log\traefikaccess.log in /config/www/logarr/index.php on line 346
+PHP message: PHP Warning:  file(C:\env\docker\traefik\traefikapp\log\traefikaccess.log): failed to open stream: No such file or directory in /config/www/logarr/index.php on line 235
+PHP message: PHP Warning:  array_reverse() expects parameter 1 to be array, boolean given in /config/www/logarr/index.php on line 236
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /config/www/logarr/index.php on line 239" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 09:53:28 [error] 281#281: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 109052560 bytes) in /config/www/logarr/index.php on line 235" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 09:53:54 [error] 281#281: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 171248216 bytes) in /config/www/logarr/index.php on line 235" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 09:53:55 [error] 281#281: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 171461696 bytes) in /config/www/logarr/index.php on line 235" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 09:53:57 [error] 281#281: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 173646376 bytes) in /config/www/logarr/index.php on line 235" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 09:54:15 [error] 281#281: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 187644304 bytes) in /config/www/logarr/index.php on line 235" while reading upstream, client: 172.30.0.1, server: _, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765", referrer: "http://localhost:8765/"
+2021/04/30 09:54:30 [error] 281#281: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 199763648 bytes) in /config/www/logarr/index.php on line 235" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"
+2021/04/30 09:54:42 [error] 281#281: *83 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 220157048 bytes) in /config/www/logarr/index.php on line 235" while reading upstream, client: 172.30.0.1, server: _, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost:8765"

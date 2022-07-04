@@ -1,0 +1,43 @@
+name: Update to latest Dnsmasq version
+
+on:
+  schedule:
+    - cron: '0 10 * * 0'  # every Sunday at 10am
+    # - cron: '*/30 * * * *'  # every 30 min
+
+jobs:
+  check-and-update:
+    name: Check and update Dnsmasq
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Get the latest release version of Dnsmasq
+        run: |
+          git clone git://thekelleys.org.uk/dnsmasq.git
+          cd dnsmasq
+          new_version=$(git describe --abbrev=0 --exclude '*rc*' --exclude '*test*')
+          # Trim leading 'v' in semantic version
+          new_version=${new_version:1}
+          echo "NEW_VERSION=$(echo $new_version)" >> $GITHUB_ENV
+
+      - name: Update Dnsmasq config example
+        run: |
+          cp dnsmasq/dnsmasq.conf.example ../dnsmasq.conf.example
+          rm -fr dnsmasq
+
+      - name: Update Dnsmasq version
+        run: |
+          current_version=$(cat .dnsmasq-version)
+          for f in .dnsmasq-version README.md Dockerfile docker-compose.yml; do
+            sed -i "s/${current_version}/${{env.NEW_VERSION}}/g" "$f"
+          done
+
+      - name: Send pull request to update to new version
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Update to Dnsmasq ${{ env.NEW_VERSION }}
+          title: Update to Dnsmasq ${{ env.NEW_VERSION }}
+          delete-branch: true

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# If needed, add permission to make this file executable | chmod +x start
+
+echo; echo "Remove stacks ..."
+docker stack rm toolproxy && sleep 1
+docker stack rm toolweb && sleep 1
+
+#echo; echo "Remove network ..."
+#docker network rm ntw_front
+
+#echo; echo "Clean up ..."
+#docker system prune -f
