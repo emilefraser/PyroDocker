@@ -1,0 +1,75 @@
+version: '3.9'
+  services:
+    {{service-name}}:
+      build: .
+      contextPath: {{Path}}
+      dockerfile: {{Dockerfile}}
+      image: webapp:tag
+      args:
+        buildno: 1
+       
+    hostname: {{hostname}}
+    devices: 
+      - /mnt/seagate
+    entrypoint: 
+    expose:
+    extra_hosts:         
+      - "somehost:10.10.20.160"
+    env_file: {{pathto-envfile}}
+    environment:
+      - SERVICENAME={{servicename}}
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VIRTUAL_HOST={{service-name}}.{{DOCKER-HOST-URL}}
+    command: 
+      - "--key=value"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.rule=Host(`${DOCKER_BASE_URL}`)"
+      - "traefik.http.routers.traefik.tls=true"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+    depends_on:
+      - db
+    init:    
+    secret:
+            
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+      - target: 9090
+        published: 9090
+        protocol: udp        
+    volumes:
+      - type: volume
+        source: global_certs
+        target: /certs
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock 
+      - type: mount
+        source: /docker/certs
+        target: /certs
+    restart: always
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+  devsecure_network:
+      ipam:
+          driver: default
+          config:
+              - subnet: 172.25.0.0/16    
+networks:
+  stack_net:
+    name: traefik_global
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.16.0/24

@@ -1,0 +1,5 @@
+--- 
+DOCKER_HOST: 10.0.0.1:2375
+REGISTRY_URL: 10.0.0.1:5000
+IMAGE_NAME: app_example_image
+IMAGE_TAG: v1

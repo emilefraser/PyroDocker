@@ -1,0 +1,1 @@
+minica -ca-cert cacert-minica.pem -ca-key cakey-minica.pem -domains,*.docker.internal,*.internal,portainer.docker.internal,jackett.docker.internal,localhost,docker.internal -ip-addresses 127.0.0.1,192.168.68.120

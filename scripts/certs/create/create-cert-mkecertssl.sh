@@ -1,0 +1,2 @@
+mkcert -cert-file "localhost.pem" -key-file "localhost-key.pem" localhost "*.docker.localhost" localhost 127.0.0.1 0.0.0.0 ::1
+mkcert -pkcs12 -p12-file "localhost.p12" localhost "*.docker.localhost" localhost 127.0.0.1 0.0.0.0 ::1

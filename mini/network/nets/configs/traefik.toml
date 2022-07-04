@@ -1,0 +1,51 @@
+[global]
+  checkNewVersion = true
+
+# Enable the Dashboard
+[api]
+  dashboard = true
+
+[acessLog]
+  filePath = "/log/access.log"
+
+# Write out Traefik logs
+[log]
+  level = "INFO"
+  filePath = "/log/traefik.log"
+
+[entryPoints.http]
+  address = ":80"
+  # Redirect to HTTPS (why wouldn't you?)
+  [entryPoints.http.http.redirections.entryPoint]
+    to = "https"
+    scheme = "https"
+
+[entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
+    [[entryPoints.https.tls.certificates]]
+      certFile = "/certs/delaporte.manakin-velociraptor.ts.net.crt"
+      keyFile = "/certs/delaporte.manakin-velociraptor.ts.net.key"
+
+
+# Docker Traefik provider
+[docker]
+  domain = "delaporte.manakin-velociraptor.ts.net"
+  exposedbydefault = false
+  endpoint = "unix:///var/run/docker.sock"
+  swarmMode = false
+  watch = true
+  
+[providers.file]
+  directory = ""
+  watch = true
+
+[tls]
+  [tls.stores]
+    [tls.stores.default]
+      [tls.stores.default.defaultCertificate]
+        certFile = "/certs/delaporte.manakin-velociraptor.ts.net.crt"
+        keyFile = "/certs/delaporte.manakin-velociraptor.ts.net.key"
+  [tls.certificates]
+    certFile="/certs/delaporte.manakin-velociraptor.ts.net.crt"
+    keyFile="/certs/delaporte.manakin-velociraptor.ts.net.key"

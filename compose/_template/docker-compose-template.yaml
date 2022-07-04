@@ -1,0 +1,87 @@
+version: '3.9'
+  services:
+    {{service-name}}:
+    container_name: {{service-name}}
+    image: {{image-name}}:{{tag}}
+    hostname: {{hostname}}
+    depends_on:
+      - db
+      - serv1
+    devices: 
+      - /mnt/seagate
+    entrypoint: 
+    expose:
+    extra_hosts:         
+      - "somehost:10.10.20.160"
+    env_file={{pathto-envfile}}
+    environment:
+      - SERVICENAME={{servicename}}
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VIRTUAL_HOST={{service-name}}.{{DOCKER-HOST-URL}}
+    command: 
+      - "--key=value"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.{{servicename}}.entrypoints=websecure"
+      - "traefik.http.routers.{{servicename}}.rule=Host(`{{servicename}}.${DOCKER_BASE_URL}`) || "Host(`{{servicename}}.${DOCKER_BASE_URL}`) 
+      - "traefik.http.routers.{{servicename}}.tls=true"
+      - "traefik.http.services.{{servicename}}.loadbalancer.server.port=8080"
+
+    init:    
+    secret:
+            
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+      - target: 9090
+        published: 9090
+        protocol: udp        
+    volumes:
+      - type: volume
+        source: global_certs
+        target: /certs
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock 
+      - type: mount
+        source: /docker/certs
+        target: /certs
+    restart: always
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+  devsecure_network:
+      ipam:
+          driver: default
+          config:
+              - subnet: 172.25.0.0/16    
+networks:
+  stack_net:
+    name: traefik_global
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.16.0/24
+        
+        
+ipam:
+  driver: default
+  config:
+    - subnet: 172.28.0.0/16
+      ip_range: 172.28.5.0/24
+      gateway: 172.28.5.254
+      aux_addresses:
+        host1: 172.28.1.5
+        host2: 172.28.1.6
+        host3: 172.28.1.7
+  options:
+    foo: bar
+    baz: "0"        

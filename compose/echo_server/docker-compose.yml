@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  {{CONTAINER_NAME}}:
+    image: ealen/echo-server:latest
+    container_name: "{{CONTAINER_NAME}}"
+    environment:
+      - SERVICENAME={{CONTAINER_NAME}}    
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VERSION=docker
+      - VIRTUAL_HOST=:`{{CONTAINER_NAME}}.${DOCKER_HOST_URL}`
+    expose:
+      - "80"
+    labels:   
+      - "traefik.enable=true"
+      - "traefik.http.routers.{{CONTAINER_NAME}}.entrypoints=websecure"
+      - "traefik.http.routers.{{CONTAINER_NAME}}.rule=Host(`{{CONTAINER_NAME}}.${DOCKER_HOST_URL}`) || ( Host(`${DOCKER_HOST_URL}`) && PathPrefix(`/{{CONTAINER_NAME}}`) )" 
+      - "traefik.http.routers.{{CONTAINER_NAME}}.tls=true"
+      - "traefik.http.services.{{CONTAINER_NAME}}.loadbalancer.server.port=80"
+    networks: 
+      - ${{GLOBAL_NETWORK_NAME}}
+    ports:
+      - target: 80
+        published: {{LOCAL_PORT}}
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: global_certs
+        target: "/certs"
+      - type: bind
+        source: "{{LOCAL_VOLUME}}"
+        target: "/config"
+    restart: always
+    
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+  ${{GLOBAL_NETWORK_NAME}}:
+    external: true
+    #name: cnet_01

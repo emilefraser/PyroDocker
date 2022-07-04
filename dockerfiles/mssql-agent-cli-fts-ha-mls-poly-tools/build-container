@@ -1,0 +1,2 @@
+#!/bin/bash
+docker build -t mssql-agent-cli-fts-hs-mls-poly-tools .

@@ -1,0 +1,3 @@
+--- 
+SOME_SPECIAL_PATH: /new/app-prod/
+DOCKER_HOST: 10.1.0.1:2375

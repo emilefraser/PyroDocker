@@ -1,0 +1,22 @@
+REPOSITORY                         TAG                                        IMAGE ID            CREATED             SIZE
+ghcr.io/linuxserver/jackett        latest                                     47b3ce23b659        12 hours ago        246MB
+ghcr.io/linuxserver/radarr         latest                                     e8222b7597ca        3 days ago          308MB
+ghcr.io/linuxserver/sabnzbd        latest                                     f6d92fead7ff        13 days ago         229MB
+ghcr.io/linuxserver/jackett        <none>                                     5c0db1663099        13 days ago         259MB
+hotio/readarr                      nightly                                    a50d09888a83        2 weeks ago         299MB
+ghcr.io/linuxserver/radarr         <none>                                     04d95a0a56f7        2 weeks ago         308MB
+ghcr.io/linuxserver/sonarr         latest                                     8979d0c5e2d5        3 weeks ago         631MB
+ghcr.io/linuxserver/nzbhydra2      latest                                     e36c24036c5d        3 weeks ago         408MB
+ghcr.io/linuxserver/lidarr         latest                                     8638f4a271ef        3 weeks ago         342MB
+docker/desktop-git-helper          6d03332b2f0c03ace31c9bca98de4830908e5bcc   cf20a5cdae3b        5 weeks ago         43.7MB
+crazymax/linguist                  7.17.0                                     c3eb05776155        6 weeks ago         71.2MB
+weaveworks/scope                   latest                                     0d05784fda33        7 weeks ago         85.2MB
+ghcr.io/linuxserver/healthchecks   latest                                     4044adb4b846        2 months ago        173MB
+portainer/portainer-ce             latest                                     5121527e11b8        3 months ago        206MB
+portainer/agent                    latest                                     9ffa457cae24        3 months ago        158MB
+docker/dev-environments-default    stable-1                                   7c85b0303242        3 months ago        607MB
+docker/desktop-git-helper          5a4fca126aadcd3f6cc3a011aa991de982ae7000   efe2d67c403b        4 months ago        44.2MB
+mcr.microsoft.com/mssql/server     2019-latest                                56beb1db7406        4 months ago        1.54GB
+mcr.microsoft.com/azure-sql-edge   latest                                     2bc005015176        5 months ago        1.14GB
+ghcr.io/linuxserver/rutorrent      latest                                     8895d6ebcd94        7 months ago        211MB
+grafana/grafana                    7.2.0                                      84537aac1f95        14 months ago       180MB

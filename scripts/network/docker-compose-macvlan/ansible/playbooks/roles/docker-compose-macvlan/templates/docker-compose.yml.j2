@@ -1,0 +1,29 @@
+---
+version: '2.4'
+services:
+
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /path/to/data:/data 
+    ports:
+      - 8000:8000
+      - 9000:9000
+    networks:
+      {{ dockernetwork_name }}:
+        ipv4_address: {{ portainer_ip }}
+
+networks:
+  {{ dockernetwork_name }}:
+    name: {{ dockernetwork_name }}
+    driver: macvlan
+    driver_opts:
+      parent: {{ nic_name }}
+    ipam:
+      config:
+        - subnet: "{{ network_subnet }}"
+          ip_range: "{{ network_ip_range }}"
+          gateway: "{{ network_gateway }}"

@@ -1,0 +1,6 @@
+docker-ce
+tailscale
+ubuntu
+shell-gnome
+
+disable dnsmasq

@@ -1,0 +1,78 @@
+
+version: "3.9"
+services:
+  traefik_test:
+    container_name: traefik_test    
+    image: traefik:latest
+    env_file: /docker/mini/network/nets/configs/traefik.env
+    environment:
+      - SERVICENAME=traefik_test     
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VERSION=docker  
+      - VIRTUAL_HOST=traefik_test.${DOCKER_HOST_URL}
+    command: 
+      - "--providers.docker"
+#      - "--providers.file.filename=/configs/traefik.toml"
+      - "--providers.file.watch=true"  
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--providers.docker.exposedbydefault=false"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+      - "--log.level=DEBUG"
+      - "--accessLog.filePath=/log/traefik.log"   
+      - "--accesslog=true"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik-http.entrypoints=web"
+      - "traefik.http.routers.traefik-http.rule=Host(`traefik_test.${DOCKER_HOST_URL}`) || Host(`${DOCKER_HOST_URL}`) "
+      - "traefik.http.routers.traefik-http.middlewares=traefik-https"
+      - "traefik.http.middlewares.traefik-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.rule=Host(`${DOCKER_HOST_URL}`)"
+      - "traefik.http.routers.traefik.tls=true"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"      
+    networks:
+      - tnet-global   
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+      - target: 443
+        published: 443
+        protocol: tcp
+      - target: 8080
+        published: 8080
+        protocol: tcp  
+    volumes:
+      - type: volume
+        source: global_certs
+        target: "/certs"        
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock         
+      - type: bind
+        source: /docker/mini/network/nets/configs/traefik.toml
+        target: /configs/traefik.toml
+      - type: bind
+        source: /docker/mini/network/nets/logs/traefik.log
+        target: /log/traefik.log   
+    restart: always
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+  tnet-global:
+    name: tnet-global
+    driver: bridge
+    external: false
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.99.0/24

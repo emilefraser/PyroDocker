@@ -1,0 +1,78 @@
+version: '3.9'
+
+services:
+  echo_server_01_01:
+    image: ealen/echo-server:latest
+    container_name: "echo_server_01_01"
+    environment:
+      - SERVICENAME=echo_server_01_01    
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VERSION=docker
+      - VIRTUAL_HOST=:`echo_server_01_01.${DOCKER_HOST_URL}`
+    expose:
+      - "80"
+    labels:   
+      - "traefik.enable=true"
+      - "traefik.http.routers.echo_server_01_01.entrypoints=websecure"
+      - "traefik.http.routers.echo_server_01_01.rule=Host(`echo_server_01_01.${DOCKER_HOST_URL}`) || ( Host(`${DOCKER_HOST_URL}`) && PathPrefix(`/echo_server_01_01`) )" 
+      - "traefik.http.routers.echo_server_01_01.tls=true"
+      - "traefik.http.services.echo_server_01_01.loadbalancer.server.port=80"
+    networks: 
+      - tnet-global
+    ports:
+      - target: 80
+        published: 91
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: global_certs
+        target: "/certs"
+      - type: bind
+        source: "/docker/mini/network/nets/configs"
+        target: "/config"
+    restart: always
+    
+  whoami_01_02:
+    image: containous/whoami
+    container_name: "whoami_01_02"
+    environment:
+      - SERVICENAME=whoami_01_02    
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VERSION=docker
+      - VIRTUAL_HOST=whoami_01_02.${DOCKER_HOST_URL}
+    labels:   
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami_01_02.entrypoints=websecure"
+      - "traefik.http.routers.whoami_01_02.rule=Host(`whoami_01_02.${DOCKER_HOST_URL}`) || ( Host(`${DOCKER_HOST_URL}`) && PathPrefix(`/whoami_01_02`) )" 
+      - "traefik.http.routers.whoami_01_02.tls=true"
+      - "traefik.http.services.whoami_01_02.loadbalancer.server.port=80"
+    networks: 
+      - tnet-global
+    ports:
+      - target: 80
+        published: 92
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: global_certs
+        target: "/certs"
+      - type: bind
+        source: "/docker/mini/network/nets/configs"
+        target: "/config"
+    restart: always    
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+  tnet-global:
+    external: true
+    #name: cnet_01

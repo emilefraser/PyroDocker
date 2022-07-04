@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  whoami_single:
+    image: containous/whoami
+    container_name: "${DOCKER_NAME}_single"
+
+    environment:
+      - SERVICENAME=sabnzbd    
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VERSION=docker
+    labels:   
+      - "traefik.enable=true"
+      - "traefik.http.routers.sabnzbd.entrypoints=websecure"
+      - "traefik.http.routers.sabnzbd.rule=Host(`sabnzbd.${DOCKER_BASE_URL}`) || ( Host(`${DOCKER_BASE_URL}`) && PathPrefix(`/sabnzbd`) )" 
+      - "traefik.http.routers.sabnzbd.tls=true"
+      - "traefik.http.services.sabnzbd.loadbalancer.server.port=80"
+    networks: 
+    ports:
+      - target: 80
+        published: 88
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: global_certs
+        target: "/certs"
+      - type: bind
+        source: "/docker/mini/network/nets/configs"
+        target: "/config"
+    restart: always
+
+networks:
+  # Define the network on which is going to operate Traefik.
+  web:
+    external: true

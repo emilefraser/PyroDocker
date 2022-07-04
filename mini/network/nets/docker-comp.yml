@@ -1,0 +1,63 @@
+
+version: "3.9"
+services:
+  traefik:
+    container_name: traefik    
+    image: traefik:latest
+    env_file: /docker/stacks/airtraffic/env/traefik.yml
+    command: 
+      - "--providers.docker"
+      - "--providers.file.watch=true"  
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--providers.docker.exposedbydefault=false"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+      - "--log.level=DEBUG"
+      - "--accessLog.filePath=/log/traefik.log"   
+      - "--accesslog=true"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik-http.entrypoints=web"
+      - "traefik.http.routers.traefik-http.rule=Host(`${DOCKER_BASE_URL}`)"
+      - "traefik.http.routers.traefik-http.middlewares=traefik-https"
+      - "traefik.http.middlewares.traefik-https.redirectscheme.scheme=https"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.rule=Host(`${DOCKER_BASE_URL}`)"
+      - "traefik.http.routers.traefik.tls=true"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"      
+    networks:
+      - tnet     
+   ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+      - target: 443
+        published: 443
+        protocol: tcp
+      - target: 8080
+        published: 8080
+        protocol: tcp  
+    volumes:
+      - type: volume
+        source: global_certs
+        target: "/certs"        
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock         
+      - type: bind
+        source: /docker/stacks/airtraffic/configs/traefik
+        target: /configs
+      - type: bind
+        source: /docker/stacks/airtraffic/logs/traefik.log
+        target: /log/traefik.log   
+    restart: always
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+  tnet:
+    external: true

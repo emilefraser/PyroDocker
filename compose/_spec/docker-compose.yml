@@ -1,0 +1,23 @@
+version: '3'
+services:
+
+  service:
+    image: imagepath
+    container_name: service
+    hostname: service
+    env_file: '${SERVICEROOT}/service/service.env'
+    ports:
+      - '9117:9117'
+    volumes:
+      - '${SERVICEROOT}/service:/config'
+    restart: unless-stopped
+    networks:
+      devsecure_network:
+          ipv4_address: 172.25.0.2
+
+networks:
+  devsecure_network:
+      ipam:
+          driver: default
+          config:
+              - subnet: 172.25.0.0/16    

@@ -1,0 +1,17 @@
+- name: Ensure /project/ exists
+  file:
+    path: /project/
+    state: directory
+- copy:
+    src: ./requirements.txt
+    dest: /project/
+- name: Make sure python requirements are met
+  pip:
+    requirements: /project/requirements.txt
+    extra_args: --disable-pip-version-check
+- copy:
+    src: ./testapp/
+    dest: /project/
+- shell: python /project/manage.py migrate
+  args:
+    chdir: /project

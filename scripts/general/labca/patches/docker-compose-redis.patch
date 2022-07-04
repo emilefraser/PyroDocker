@@ -1,0 +1,111 @@
+diff --git a/docker-compose.yml b/docker-compose.yml
+index b290d358..0cd8c8dd 100644
+--- a/docker-compose.yml
++++ b/docker-compose.yml
+@@ -25,8 +25,6 @@ services:
+         ipv4_address: 10.77.77.77
+       rednet:
+         ipv4_address: 10.88.88.88
+-      redisnet:
+-        ipv4_address: 10.33.33.33
+     extra_hosts:
+       # This is used by TestOldTLS in va/http_test.go
+       # TODO(#6011): Remove once TLS 1.0 and 1.1 support is gone.
+@@ -44,7 +42,6 @@ services:
+       - 4003:4003 # OCSP
+     depends_on:
+       - bmysql
+-      - bredis_clusterer
+     entrypoint: test/entrypoint.sh
+     working_dir: &boulder_working_dir /boulder
+ 
+@@ -65,78 +62,6 @@ services:
+     logging:
+         driver: none
+ 
+-  bredis_1:
+-    image: redis:6.2.7
+-    volumes:
+-      - ./test/:/test/:cached
+-    command: redis-server /test/redis.config
+-    networks:
+-      redisnet:
+-          ipv4_address: 10.33.33.2
+-
+-  bredis_2:
+-    image: redis:6.2.7
+-    volumes:
+-      - ./test/:/test/:cached
+-    command: redis-server /test/redis.config
+-    networks:
+-      redisnet:
+-          ipv4_address: 10.33.33.3
+-
+-  bredis_3:
+-    image: redis:6.2.7
+-    volumes:
+-      - ./test/:/test/:cached
+-    command: redis-server /test/redis.config
+-    networks:
+-      redisnet:
+-          ipv4_address: 10.33.33.4
+-
+-  bredis_4:
+-    image: redis:6.2.7
+-    volumes:
+-      - ./test/:/test/:cached
+-    command: redis-server /test/redis.config
+-    networks:
+-      redisnet:
+-          ipv4_address: 10.33.33.5
+-
+-  bredis_5:
+-    image: redis:6.2.7
+-    volumes:
+-      - ./test/:/test/:cached
+-    command: redis-server /test/redis.config
+-    networks:
+-      redisnet:
+-          ipv4_address: 10.33.33.6
+-
+-  bredis_6:
+-    image: redis:6.2.7
+-    volumes:
+-      - ./test/:/test/:cached
+-    command: redis-server /test/redis.config
+-    networks:
+-      redisnet:
+-          ipv4_address: 10.33.33.7
+-
+-  bredis_clusterer:
+-    image: redis:6.2.7
+-    volumes:
+-      - ./test/:/test/:cached
+-      - ./cluster/:/cluster/:cached
+-    command: /test/wait-for-it.sh 10.33.33.2 4218 /test/redis-create.sh
+-    depends_on:
+-      - bredis_1
+-      - bredis_2
+-      - bredis_3
+-      - bredis_4
+-      - bredis_5
+-      - bredis_6
+-    networks:
+-        redisnet:
+-          ipv4_address: 10.33.33.10
+-          aliases:
+-            - boulder-redis-clusterer
+ 
+   netaccess:
+     image: *boulder_image
+@@ -164,10 +89,3 @@ networks:
+       driver: default
+       config:
+         - subnet: 10.88.88.0/24
+-
+-  redisnet:
+-    driver: bridge
+-    ipam:
+-      driver: default
+-      config:
+-        - subnet: 10.33.33.0/24

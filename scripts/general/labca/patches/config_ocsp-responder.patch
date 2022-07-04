@@ -1,0 +1,15 @@
+diff --git a/test/config/ocsp-responder.json b/test/config/ocsp-responder.json
+index ed874d3..a1a78f3 100644
+--- a/test/config/ocsp-responder.json
++++ b/test/config/ocsp-responder.json
+@@ -7,9 +7,7 @@
+     "path": "/",
+     "listenAddress": "0.0.0.0:4002",
+     "issuerCerts": [
+-      "/hierarchy/intermediate-cert-rsa-a.pem",
+-      "/hierarchy/intermediate-cert-rsa-b.pem",
+-      "/hierarchy/intermediate-cert-ecdsa-a.pem"
++      "/hierarchy/intermediate-cert-rsa-a.pem"
+     ],
+     "maxAge": "10s",
+     "timeout": "4.9s",
