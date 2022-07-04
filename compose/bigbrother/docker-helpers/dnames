@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Get a list of running container's names and print to stdout
+
+for ID in `docker ps | awk '{print $1}'| grep -v 'CONTAINER'`
+do
+    docker inspect $ID | grep Name | head -1 | awk '{print $2}' | sed 's/,//g' | sed 's%/%%g' | sed 's/"//g'
+done

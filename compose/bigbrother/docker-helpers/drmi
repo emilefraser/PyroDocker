@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "This command will remove all untagged docker images."
+
+read -p "Are you sure you want to continue? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')
+fi
+
+docker images

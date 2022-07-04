@@ -1,0 +1,5 @@
+# in files/certificates.toml
+
+[[tls.certificates]] #first certificate
+   certFile = "/certs/localhost.pem"
+   keyFile = "/certs/localhost-key.pem"

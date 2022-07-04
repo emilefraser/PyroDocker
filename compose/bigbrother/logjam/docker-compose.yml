@@ -1,0 +1,33 @@
+memcache:
+    container_name: memcache
+    image: memcached:1.6.8
+
+  logjamdb:
+    container_name: logjamdb
+    image: mongo:4.4-bionic
+    command: mongod
+    volumes:
+      - ~/data/db.logjam:/data/db
+    ports:
+      - "27017:27017"
+
+  demo:
+    container_name: logjam-demo
+    image: stkaes/logjam-app
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "9604:9604"
+      - "9605:9605"
+      - "9705:9705"
+      - "9651:9651"
+    tty: true
+    environment:
+      - LOGJAMDB_NAME=logjamdb
+      - LOGJAMCACHE_NAME=memcache
+      - LOGJAM_ENV=production
+      - LOGJAM_USE_CACHE=0
+      - LOGJAM_REPLAY=1
+    env_file:
+      - "logjam.env"
+     
