@@ -1,0 +1,8 @@
+services:
+    docker-compose-ui:
+        container_name: docker-compose-ui
+        ports:
+            - '5000:5000'
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+        image: 'francescou/docker-compose-ui:latest'

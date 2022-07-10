@@ -1,37 +1,42 @@
 
 version: "3.9"
 services:
-  traefik_new:
-    container_name: traefik_new    
+  traefik:
+    container_name: traefik
+    hostname: traefik
+    domainname: delaporte.manakin-velociraptor.ts.net #traefik.delaporte.manakin-velociraptor.ts.net
     image: traefik:latest
-    env_file: /docker/stacks/airtraffic/configs/traefik/traefik.env
+    env_file: /home/pyromaniac/Repos/docker/compose/traefik/current/configs/traefik/traefik.env
     environment:
-      - SERVICENAME=sabnzbd
-      - VIRTUAL_HOST=traefik.${DOCKER_BASE_URL}
+      - SERVICENAME=traefik
+      - VIRTUAL_HOST=traefik.delaporte.${DOCKER_BASE_URL}
       - TZ=Africa/Johannesburg
       - PGID=1000
       - PUID=1000
       - UMASK=002
       - VERSION=docker    
-#    command: 
-#      - "--providers.docker"
-#      - "--providers.file.watch=true"  
-#      - "--entrypoints.web.address=:80"
-#      - "--entrypoints.websecure.address=:443"
-#      - "--providers.docker.exposedbydefault=false"
-#      - "--api.insecure=true"
-#      - "--api.dashboard=true"
-#      - "--log.level=DEBUG"
-#      - "--accessLog.filePath=/log/traefik.log"   
-#      - "--accesslog=true"
+        # extra_hosts:
+        #- "traefik.delaporte.manakin-velociraptor.ts.net:172.28.0.2"    
+    command: 
+      - "--providers.docker"
+      - "--providers.file.filename=/root/.config/ssl.toml"
+      - "--providers.file.watch=true"  
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--providers.docker.exposedbydefault=false"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
+      - "--log.level=DEBUG"
+      - "--accessLog.filePath=/log/traefik.log"   
+      - "--accesslog=true"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.traefik-http.entrypoints=web"
-      - "traefik.http.routers.traefik-http.rule=Host(`traefik.${DOCKER_BASE_URL}`) || Host(`${DOCKER_BASE_URL}`)"
+      - "traefik.http.routers.traefik-http.rule=(Host(`delaporte.${DOCKER_BASE_URL}`) || Host(`traefik.delaporte.${DOCKER_BASE_URL}`))"
       - "traefik.http.routers.traefik-http.middlewares=traefik-https"
       - "traefik.http.middlewares.traefik-https.redirectscheme.scheme=https"
       - "traefik.http.routers.traefik.entrypoints=websecure"
-      - "traefik.http.routers.traefik.rule=( Host(`${DOCKER_BASE_URL}`) && PathPrefix(`/sabnzbd`) )" 
+      - "traefik.http.routers.traefik.rule=(Host(`delaporte.${DOCKER_BASE_URL}`) || Host(`traefik.delaporte.${DOCKER_BASE_URL}`))"
       - "traefik.http.routers.traefik.tls=true"
       - "traefik.http.services.traefik.loadbalancer.server.port=8080"
     networks:
@@ -54,10 +59,16 @@ services:
         source: /var/run/docker.sock
         target: /var/run/docker.sock         
       - type: bind
-        source: /docker/stacks/airtraffic/configs/traefik
+        source: /home/pyromaniac/Repos/docker/compose/traefik/current/configs/traefik/traefik-ssl.toml
+        target: /root/.config/ssl.toml
+      - type: bind
+        source: /home/pyromaniac/Repos/docker/compose/traefik/current/configs/traefik
         target: /configs
       - type: bind
-        source: /docker/stacks/airtraffic/logs/traefik.log
+        source: /home/pyromaniac/Repos/docker/compose/traefik/current/root
+        target: /root
+      - type: bind
+        source: /home/pyromaniac/Repos/docker/compose/traefik/current/logs/traefik.log
         target: /log/traefik.log   
     restart: always
 

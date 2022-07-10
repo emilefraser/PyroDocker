@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  enclave-fabric:
+    container_name: enclave-fabric
+    image: enclavenetworks/enclave:latest
+    restart: always
+
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    environment:
+      ENCLAVE_ENROLMENT_KEY: ${ENCLAVE_ENROLMENT_KEY}
+    volumes:
+      - $HOME/Repos/docker/pyrodocker/compose/enclave/config:/etc/enclave/profiles
+
+volumes:
+  enclave-config:
+  enclave-logs:

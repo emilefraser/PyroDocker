@@ -1,0 +1,25 @@
+services:
+  $SERVICENAME:
+    image: containous/whoami
+    container_name: ${SERVICENAME}
+    environment:
+      - SERVICENAME=${SERVICENAME}
+      - TZ=Africa/Johannesburg
+      - PGID=1000
+      - PUID=1000
+      - UMASK=002
+      - VERSION=docker
+    ports:
+      - target: 80
+        published: 92
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: global_certs
+        target: "/certs"
+    restart: always    
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true

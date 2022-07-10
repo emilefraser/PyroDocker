@@ -1,0 +1,32 @@
+services:
+  tailscale:
+      privileged: true
+      hostname: tailscale  # This will become the tailscale device name
+      network_mode: "host"
+      container_name: tailscaled
+      image: tailscale/tailscale:latest
+      devices:
+       - "/dev/net/tun:/dev/net/tun" 
+      environment:
+        - AUTH_KEY=tskey-krn3yb1CNTRL-VMgPZQUXtd82UGzAxvWaBU   
+      volumes:
+          - "$HOME/configs/tailscale:/var/lib"        # State data will be stored in this directory
+                               # Required for tailscale to work
+          - tailscale_data:/var/lib/tailscale
+          
+      cap_add:                                               # Required for tailscale to work
+        - CAP_NET_ADMIN
+        - CAP_NET_RAW
+        - SYS_MODULE
+      
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+
+      command: 
+        - "tailscaled"
+        #- "--advertise-exit-node
+        - "--verbose 1"
+        - "--privileged"
+      restart: unless-stopped
+      
+      

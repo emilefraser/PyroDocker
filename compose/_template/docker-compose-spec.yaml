@@ -1,0 +1,200 @@
+
+# Notes
+
+#http://blogs.perl.org/users/tinita/2018/03/strings-in-yaml---to-quote-or-not-to-quote.html
+#plain scalars:
+#- a string
+#- a string with a \ backslash that doesn't need to be escaped
+#- can also use " quotes ' and $ a % lot /&?+ of other {} [] stuff
+
+#single quoted:
+#- '& starts with a special character, needs quotes'
+#- 'this \ backslash also does not need to be escaped'
+#- 'just like the " double quote'
+#- 'to express one single quote, use '' two of them'
+
+#double quoted:
+#- "here we can use predefined escape sequences like \t \n \b"
+#- "or generic escape sequences \x0b \u0041 \U00000041"
+#- "the double quote \" needs to be escaped"
+#- "just like the \\ backslash"
+#- "the single quote ' and other characters must not be escaped"
+
+#literal block scalar: |
+#  a multiline text
+#  line 2
+#  line 3
+
+#folded block scalar: >
+#  a long line split into
+#  several short
+#  lines for readability
+
+
+#	Both $VARIABLE and ${VARIABLE} syntax are supported. 
+#    ${VARIABLE:-default} evaluates to default if VARIABLE is unset or empty in the environment.
+#    ${VARIABLE-default} evaluates to default only if VARIABLE is unset in the environment.
+# ${VARIABLE:?err} exits with an error message containing err if VARIABLE is unset or empty in the environment.
+# ${VARIABLE?err} exits with an error message containing err if VARIABLE is unset in the environment
+# You can use a $$ (double-dollar sign) when your configuration needs a literal dollar sign.
+# version: '3.9' (deprecated)
+
+# specifying byte values
+# Value express a byte value as a string in {amount}{byte unit}
+# The supported units are b (bytes), k or kb (kilo bytes), m or mb (mega bytes) and g or gb (giga bytes).
+
+#specifying durations
+#Value express a duration as a string in the in the form of {value}{unit}
+# The supported units are us (microseconds), ms (milliseconds), s (seconds), m (minutes) and h (hours).
+
+compose=dev:
+  files: [docker-compose.yaml, d-c.override.yml]
+
+compose=test:
+  files: [docker-compose.yaml, d-c.test.yml]
+
+compose=load:
+  files: [docker-compose.yaml, d-c.load.yml]
+
+
+
+
+services:
+	{{service-name}}:
+		container_name: {{service-name}}
+		image: {{image-name}}:{{tag}}
+		hostname: {{hostname}}
+		depends_on:
+		  - {{service1}}
+		  - {{service2}}
+		command: 
+		  - "--key=value"		  
+		cap_add:
+		  - ALL
+		cap_drop:
+		  - NET_ADMIN
+		  - SYS_ADMIN		  
+		devices: 
+		  - /mnt/seagate
+		  - /dev/ttyUSB0:/dev/ttyUSB0
+		dns:
+		  - 8.8.8.8
+		  - 9.9.9.9
+		dns_search:
+		  - dc1.example.com
+		  - dc2.example.com
+		entrypoint: #Override the default entrypoint.
+		  - /code/entrypoint.sh
+		env_file: 
+		  - {{pathto-envfile1}}
+		  - {{pathto-envfile2}}
+		environment:
+		  - SERVICENAME={{servicename}}
+		  - TZ={{continent}}}/{{city}}
+		  - PGID=1000
+		  - PUID=1000
+		  - UMASK=002
+		  - VIRTUAL_HOST={{service-name}}.{{DOCKER-HOST-URL}}
+		  - BOOL='true'
+		  - `VIRTUAL_HOST=$DDEV_HOSTNAME`
+          - `HTTP_EXPOSE=portNum` #The `hostPort:containerPort` convention may be used here to expose a container's port to a different external port.
+          - `HTTPS_EXPOSE=9998:80,9999:81`
+
+		expose: # accessible to linked services
+		  - "3000"
+  		  - "8000"
+		extra_hosts: #ip address and hostname is created in /etc/hosts         
+		  - "somehost:10.10.20.160"
+		  - "otherhost:50.31.209.229"
+		additional_fqdns:
+			- example.com
+			- somesite.example.com			
+		additional_hostnames:
+			- "extraname"
+			- "fr.mysite"
+		
+		healthcheck:
+		  test: ["CMD", "curl", "-f", "http://localhost"]
+		  interval: 1m30s
+		  timeout: 10s
+		  retries: 3
+		  start_period: 40s
+		init: true # false  
+		labels:
+		  - "traefik.enable=true"
+		  - "traefik.http.routers.{{servicename}}.entrypoints=websecure"
+		  - "traefik.http.routers.{{servicename}}.rule=Host(`{{servicename}}.${DOCKER_BASE_URL}`) || "Host(`{{servicename}}.${DOCKER_BASE_URL}`)"
+		  - "traefik.http.routers.{{servicename}}.tls=true"
+		  - "traefik.http.services.{{servicename}}.loadbalancer.server.port=8080"
+    	logging:
+     		driver: "json-file" # syslog, none
+      		options:
+        		max-size: "200k"
+        		max-file: "10"          
+		ports:
+		  - target: "8080"
+		    published: "8080"
+		    protocol: tcp
+		    mode: host
+		  - target: "9090"
+		    published: "9090"
+		    protocol: udp   
+		    mode: host # ingress
+		secrets:
+      	  - source: my_secret
+        	target: redis_secret
+       	 	uid: '103'
+        	gid: '103'
+       		mode: 0440
+			pid: "host" 
+		volumes:
+		  - type: volume # volume, bind, tmpfs or npipe
+		    source: global_certs
+		    target: /certs
+		    read_only: true
+		  - type: bind
+		    source: /var/run/docker.sock
+		    target: /var/run/docker.sock 
+		  - type: mount
+		    source: /docker/certs
+		    target: /certs
+		restart: always # no, on-failure, unless-stopped
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+			
+  stack_net:
+    name: traefik_global
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.16.0/24       
+
+  default:
+    name: my-pre-existing-network
+    external: true   
+    
+  devsecure_net:
+      ipam:
+          driver: default # bridge, host, none, "service:[service name]", "container:[container name/id]"
+		  config:
+			- subnet: 172.28.0.0/16
+			  ip_range: 172.28.5.0/24
+			  gateway: 172.28.5.254
+			  aux_addresses:
+				host1: 172.28.1.5
+				host2: 172.28.1.6
+				host3: 172.28.1.7
+		  options:
+			foo: bar
+			baz: "0"   
+    
+secrets:
+  my_secret:
+    file: ./my_secret.txt
+  my_other_secret:
+    external: true

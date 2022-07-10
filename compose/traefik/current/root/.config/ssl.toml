@@ -1,0 +1,9 @@
+[tls]
+
+[tls.stores]
+
+[tls.stores.default]
+
+[tls.stores.default.defaultCertificate]
+certFile = "/docker/certs/delaporte.manakin-velociraptor.ts.net.crt"
+keyFile = "/docker/certs/delaporte.manakin-velociraptor.ts.net.key"

@@ -1,0 +1,1 @@
+npm install composerize -g

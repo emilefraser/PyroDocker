@@ -1,0 +1,12 @@
+services:
+  whoami:
+    container_name: whoami_override
+    ports:
+      - target: 80
+        published: 95
+        protocol: tcp
+
+#volumes:
+#  global_certs:
+#    name: global_certs
+#   external: true

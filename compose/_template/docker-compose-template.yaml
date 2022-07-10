@@ -1,0 +1,104 @@
+# Notes
+#	Both $VARIABLE and ${VARIABLE} syntax are supported. 
+#    ${VARIABLE:-default} evaluates to default if VARIABLE is unset or empty in the environment.
+#    ${VARIABLE-default} evaluates to default only if VARIABLE is unset in the environment.
+# ${VARIABLE:?err} exits with an error message containing err if VARIABLE is unset or empty in the environment.
+# ${VARIABLE?err} exits with an error message containing err if VARIABLE is unset in the environment
+# You can use a $$ (double-dollar sign) when your configuration needs a literal dollar sign.
+# version: '3.9' (deprecated)
+
+# specifying byte values
+# Value express a byte value as a string in {amount}{byte unit}
+# The supported units are b (bytes), k or kb (kilo bytes), m or mb (mega bytes) and g or gb (giga bytes).
+
+#specifying durations
+#Value express a duration as a string in the in the form of {value}{unit}
+# The supported units are us (microseconds), ms (milliseconds), s (seconds), m (minutes) and h (hours).
+
+
+services:
+	{{service-name}}:
+		container_name: {{service-name}}
+		image: {{image-name}}:{{tag}}
+		hostname: {{hostname}}
+		depends_on:
+		  - db
+		  - serv1
+		devices: 
+		  - /mnt/seagate
+		entrypoint: 
+		expose:
+		extra_hosts:         
+		  - "somehost:10.10.20.160"
+		env_file={{pathto-envfile}}
+		environment:
+		  - SERVICENAME={{servicename}}
+		  - TZ=Africa/Johannesburg
+		  - PGID=1000
+		  - PUID=1000
+		  - UMASK=002
+		  - VIRTUAL_HOST={{service-name}}.{{DOCKER-HOST-URL}}
+		command: 
+		  - "--key=value"
+		labels:
+		  - "traefik.enable=true"
+		  - "traefik.http.routers.{{servicename}}.entrypoints=websecure"
+		  - "traefik.http.routers.{{servicename}}.rule=Host(`{{servicename}}.${DOCKER_BASE_URL}`) || "Host(`{{servicename}}.${DOCKER_BASE_URL}`) 
+		  - "traefik.http.routers.{{servicename}}.tls=true"
+		  - "traefik.http.services.{{servicename}}.loadbalancer.server.port=8080"
+
+		init:    
+		secret:
+            
+		ports:
+		  - target: 8080
+		    published: 8080
+		    protocol: tcp
+		  - target: 9090
+		    published: 9090
+		    protocol: udp        
+		volumes:
+		  - type: volume
+		    source: global_certs
+		    target: /certs
+		  - type: bind
+		    source: /var/run/docker.sock
+		    target: /var/run/docker.sock 
+		  - type: mount
+		    source: /docker/certs
+		    target: /certs
+		restart: always
+
+volumes:
+  global_certs:
+    name: global_certs
+    external: true
+
+networks:
+  devsecure_network:
+      ipam:
+          driver: default
+          config:
+              - subnet: 172.25.0.0/16    
+networks:
+  stack_net:
+    name: traefik_global
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.16.0/24
+        
+        
+ipam:
+  driver: default
+  config:
+    - subnet: 172.28.0.0/16
+      ip_range: 172.28.5.0/24
+      gateway: 172.28.5.254
+      aux_addresses:
+        host1: 172.28.1.5
+        host2: 172.28.1.6
+        host3: 172.28.1.7
+  options:
+    foo: bar
+    baz: "0"        

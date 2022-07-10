@@ -1,0 +1,1 @@
+docker run -it --rm     -v /var/run/docker.sock:/var/run/docker.sock:ro     --label ofelia.job-local.my-test-job.schedule=@every 5s     --label ofelia.job-local.my-test-job.command=date         mcuadros/ofelia:latest daemon --docker
